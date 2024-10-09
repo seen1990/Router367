@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* จัดให้อยู่ตรงกลางในแนวนอน */
+  align-items: center;    /* จัดให้อยู่ตรงกลางในแนวตั้ง */
+  min-width: 320px;
+  min-height: 100vh;      /* ให้ความสูงของ body ครอบคลุมทั้งหน้าจอ */
+  background-color: #f6f5f5; /* กำหนดสีพื้นหลัง */
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  margin-left: 5px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* แบ่งพื้นที่เท่ากันสำหรับแต่ละคอลัมน์ */
+  gap: 50px; /* ระยะห่างระหว่างคอลัมน์ */
+}
+
+.product-list {
+  flex: 1; /* ปรับขนาดพื้นที่ของ product list */
+}
+
+.product-form {
+  flex: 1; /* ปรับขนาดพื้นที่ของ form */
+  max-width: 400px; /* กำหนดความกว้างสูงสุดของฟอร์ม */
+}
+
+label {
+  display: block; /* จัดให้อยู่ในบรรทัดใหม่ */
+  font-size: 1.2em; /* ขนาดฟอนต์ของ label */
+  margin-bottom: 0.5em; /* ระยะห่างระหว่าง label กับ input */
+}
+
+input {
+  border: 2px solid #ccc; /* เพิ่มเส้นขอบปกติ */
+  border-radius: 8px; /* ทำมุมของกรอบมน */
+  padding: 0.5em 1em;
+  font-size: 1em;
+  margin-left: 5px; /* เว้นระยะระหว่าง input กับ label */
+  background-color: #f9f9f9; /* สีพื้นหลัง */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* เพิ่มเอฟเฟกต์ transition */
+}
+
+input:focus {
+  border-color: #646cff; /* เปลี่ยนสีเส้นขอบเมื่อ focus */
+  box-shadow: 0 0 8px rgba(100, 108, 255, 0.6); /* เพิ่มเงารอบๆ ช่อง input */
+  outline: none; /* ลบเส้นขอบเริ่มต้นของเบราว์เซอร์ */
+}
+
+input::placeholder {
+  color: #aaa; /* เปลี่ยนสี placeholder */
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
